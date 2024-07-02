@@ -2,6 +2,7 @@ import './App.css';
 import { BrowserRouter, Link, Route, Routes, Switch } from 'react-router-dom';
 import Layout from './pages/layout.tsx';
 import Movies from './pages/movies.tsx';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Route path='/' element={<Layout />}>
         Layout
       </Route>
+      <Route path='*' element={<NotFound />} />
     </Routes>
   );
 }
