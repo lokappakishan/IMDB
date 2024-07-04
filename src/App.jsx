@@ -7,7 +7,6 @@ import Navbar from './components/Navbar';
 function App() {
   return (
     <div className="App flex flex-col h-full w-full justify-between" >
-      <h1>LOGO</h1>
       <Navbar />
 
       <Routes>

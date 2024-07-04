@@ -29,18 +29,17 @@ function Movies() {
 
 
     return(
-        <div>    
-            <h1>Movies</h1>
-            <ul>
+        <div className="p-8">    
+            <ul className="grid grid-col-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {
                     movies.map((movie,index)=>(
-                        <li key={index}>
-                            <h2>Title:{movie.title}</h2>
-                            <img src={movie.poster_path} alt={`${movie.title} poster`} />
-                            <p>Overview:{movie.overview}</p>
-                            <p>Release date: {movie.release_date}</p>
-                            <p><strong>Rating:</strong> {movie.vote_average}</p>
-                            <p>popularity:{movie.popularity}</p>                            
+                        <li key={index} className="bg-white rounded-lg shadow-lg p-4 flex flex-col justify-between">
+                            <h2 className="text-xl font-semibold mb-2 text-left">{movie.title}</h2>
+                            <img src={movie.poster_path} alt={`${movie.title} poster`} className="w-full h-auto rounded mb-4"/>
+                            <p className="text-gray-700 mb-2 text-left"><strong>Overview : </strong>{movie.overview}</p>
+                            <p className="text-gray-700 mb-2 text-left"> <strong>Release date : </strong>{movie.release_date}</p>
+                            <p className="text-gray-700 mb-2 text-left"><strong>Rating : </strong> {movie.vote_average}</p>
+                            <p className="text-gray-700 mb-2 text-left"><strong>popularity : </strong>{movie.popularity}</p>                            
                         </li>
                     ))
                 }
